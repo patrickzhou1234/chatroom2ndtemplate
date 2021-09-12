@@ -21,6 +21,7 @@ function sendmsg() {
 
 socket.on('chatmsg', function(user, msg) {
   msgs.innerHTML += user+": "+msg+"<br>";
+  msgs.scrollTop = msgs.scrollHeight;
 });
 
 function welc() {
@@ -33,6 +34,7 @@ function welc() {
 
 socket.on('welc', function(user) {
   msgs.innerHTML += "Bot🤖: Welcome to the chat "+user+". <br>";
+  msgs.scrollTop = msgs.scrollHeight;
 });
 
 function checkinput(event, element) {
